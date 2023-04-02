@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<h1>Mad Libs!</h1>
+<form action="/story">
+    {% for question in questions %}
+    <p>{{question}}:
+        <input name="{{question}}">
+    </p>
+    {% endfor %}
+    <button>Create Story</button>
+</form>
+{% endblock%}
